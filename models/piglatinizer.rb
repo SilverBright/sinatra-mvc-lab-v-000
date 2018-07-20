@@ -1,11 +1,8 @@
 class PigLatinizer
 
-  def translate(word)
-    Alpha = ('a'..'z').to_a
-Vowels = %w[a e i o u]
-Consonants = Alpha - Vowels
 
-def translate(word)
+
+def piglatinize(word)
   if Vowels.include?(word[0])
     word + 'ay'
   elsif Consonants.include?(word[0]) &&
