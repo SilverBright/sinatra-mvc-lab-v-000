@@ -5,7 +5,6 @@ class PigLatinizer
     vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
     consonants = alphabet - vowels
     unusable = ["i", "a", "an", "in", "on", "and"]
-    # unusable = ["a", "an", "in", "on", "and"]
     word.gsub!(/[^a-z0-9\s]/i, '')
     word = word.split("")
    # ["k", "i", "t", "t", "e", "n"]
@@ -29,7 +28,7 @@ end
     result = words.split(" ").map do |word|
       piglatinize(word)
     end
-    result.join(" ")
+    # result.join(" ")
   end
 
 
