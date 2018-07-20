@@ -34,6 +34,12 @@ def piglatinize(sent)
                       translation = words[i][count + 2..words[i].length] + 'quay'
                       result.push(translation)
                       next
+                    else
+                        # handle words with 'qu' in middle
+                        if char == 'i'
+                            translation = words[i][count + 2..words[i].length] + 'way'
+                            result.push(translation)
+                            next
                   else
                       translation += char
                   end
