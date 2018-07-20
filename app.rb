@@ -10,4 +10,5 @@ class App < Sinatra::Base
     @piglatin = user_input.piglatinize(params[:user_phrase])
     erb :results
   end
+  
 end
