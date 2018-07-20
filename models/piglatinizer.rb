@@ -1,17 +1,46 @@
 class PigLatinizer
 
-  def piglatinize(input)
-      pig_string = ''
-      if input[0] =~ /[aeiou]/
-          return input + 'ay'
-      elsif input[0] =~ /[^aeiou]/ && input[1] =~ /[aeiou]/
-          return input[1..-1] + input[0] + 'ay'
-      elsif input[0..1] =~ /[^aeiou]/
-          return input[2..-1] + input[0..1] + 'ay'
+  def piglatinize(x)
+
+      if x.index(/[aeiou]/) == 0
+        x = x + "ay"
+      elsif x[0..1] == "qu"
+        first = x.chr
+        x.reverse!.chop!.reverse!
+        second = x.chr
+        x.reverse!.chop!.reverse!
+        x = x + first + second + "ay"
+      elsif x.index(/[aeiou]/) == 1
+        first = x.chr
+        x.reverse!.chop!.reverse!
+        x = x + first + "ay"
+      elsif x[1..2] == "qu"
+        first = x.chr
+        x.reverse!.chop!.reverse!
+        second = x.chr
+        x.reverse!.chop!.reverse!
+        third = x.chr
+        x.reverse!.chop!.reverse!
+        x = x + first + second + third +"ay"
+      elsif x.index(/[aeiou]/) == 2
+        first = x.chr.chr
+        x.reverse!.chop!.reverse!
+        second = x.chr
+        x.reverse!.chop!.reverse!
+        x = x + first + second + "ay"
+      elsif x.index(/[aeiou]/) == 3
+        first = x.chr
+        x.reverse!.chop!.reverse!
+        second = x.chr
+        x.reverse!.chop!.reverse!
+        third = x.chr
+        x.reverse!.chop!.reverse!
+        x = x + first + second + third +"ay"
       else
-          return input[0] + input + 'ay'
+        x
       end
-  end
+    end
+
 
   # def translate_words(multi_words)
   #     word_count = multi_words.split.size
