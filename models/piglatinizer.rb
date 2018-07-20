@@ -13,14 +13,14 @@ class PigLatinizer
       end
   end
 
-  def translate_words(multi_words)
-      word_count = multi_words.split.size
-      if word_count > 1
-          multi_words.map! do |word|
-              translate(word)
-          end
-      end
-  end
+  # def translate_words(multi_words)
+  #     word_count = multi_words.split.size
+  #     if word_count > 1
+  #         multi_words.map! do |word|
+  #             translate(word)
+  #         end
+  #     end
+  # end
 
 
 # def piglatinize(sent)
