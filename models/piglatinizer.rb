@@ -3,7 +3,7 @@ class PigLatinizer
    def piglatinize(sentence)
      if sentence.include?(" ")
        split_sentence(sentence).join(" ")
-     elsif ["a","e","i","o","u"].include?(sentence[0])
+     elsif ["a","e","i","o","u"].include?(sentence[0].downcase)
        sentence + "way"
      else
         parts = sentence.split(/([aeiou].*)/)
