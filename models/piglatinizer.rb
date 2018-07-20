@@ -59,7 +59,7 @@ class PigLatinizer
 
   end #End of translate function
 
-
+translate('three');
 
   # def translate_words(multi_words)
   #     word_count = multi_words.split.size
