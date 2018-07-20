@@ -3,9 +3,9 @@ class PigLatinizer
 
 
 def piglatinize(sent)
-      sent = sent.downcase
-      vowels = ['a', 'e', 'i', 'o', 'u']
       words = sent.split(' ')
+      vowels = ['a', 'e', 'i', 'o', 'u']
+
       result = []
 
   words.each_with_index do |word, i|
