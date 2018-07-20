@@ -12,7 +12,7 @@ def piglatinize(sent)
       translation = ''
       qu = false
       if vowels.include? word[0]
-          translation = word + 'way'
+          translation = word + 'ay'
           result.push(translation)
       else
           word = word.split('')
