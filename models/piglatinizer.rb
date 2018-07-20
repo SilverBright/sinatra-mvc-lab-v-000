@@ -3,7 +3,7 @@ class PigLatinizer
   def piglatinize(x)
 
       if x.index(/[aeiou]/) == 0
-        x = x + "way"
+        x = x + "ay"
       elsif x[0..1] == "qu"
         first = x.chr
         x.reverse!.chop!.reverse!
