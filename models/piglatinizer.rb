@@ -41,7 +41,7 @@ def piglatinize(sent)
               end
           end
           # translation of consonant words without qu
-          if not qu || i
+          if not qu
               translation = words[i][count..words[i].length] + translation + 'ay'
               result.push(translation)
           end
