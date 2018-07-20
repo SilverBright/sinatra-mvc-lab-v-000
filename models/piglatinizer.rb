@@ -27,14 +27,14 @@ def piglatinize(sent)
                       next
                   end
                   break
-              else
+              elsif
                   # handle words with 'qu' in middle
                   if char == 'q' and word[i+1] == 'u'
                       qu = true
                       translation = words[i][count + 2..words[i].length] + 'quay'
                       result.push(translation)
                       next
-                    else
+                  else
                         # handle words with 'qu' in middle
                         if char == 'i'
                             translation = words[i][count + 2..words[i].length] + 'way'
