@@ -19,6 +19,7 @@ def translate(word)
     word[1..-1] + word[0..0] + 'ay'
   end
 end
+end
 
 
   def to_pig_latin(words)
