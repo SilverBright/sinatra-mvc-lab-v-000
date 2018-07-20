@@ -28,7 +28,7 @@ end
     result = words.split(" ").map do |word|
       piglatinize(word)
     end
-    # result.join(" ")
+    result.join(" ")
   end
 
 
